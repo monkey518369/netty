@@ -40,7 +40,7 @@ public class NioServer {
 					if (k.isReadable()) {
 						handleRead(k);
 					} else if (k.isWritable()) {
-						handleWrite(k);
+						handleWrite(k,"");
 					} else if (k.isAcceptable()){
 						handleAccept(k);
 					}
