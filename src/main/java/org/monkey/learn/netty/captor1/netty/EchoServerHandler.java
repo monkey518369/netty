@@ -18,6 +18,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 		System.out.println(new String(bytes));
 		buf.writeBytes("monkey reaad".getBytes());
 		ctx.channel().write(buf);
+		ctx.write(buf);
 	}
 
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {

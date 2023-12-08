@@ -25,7 +25,7 @@ public class NioClients {
 				Selector selector = Selector.open();
 				client.register(selector, SelectionKey.OP_READ);
 				while (true) {
-					System.out.printf("低%s次循环%n",count++);
+					System.out.printf("第%s次循环%n",count++);
 					handleWrite(client);
 					if (selector.select() > 0) {
 						Set<SelectionKey> keys = selector.selectedKeys();
